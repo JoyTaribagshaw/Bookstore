@@ -6,11 +6,11 @@ export const booksSlice = createSlice({
     value: []
   },
   reducers: {
-    add: (state,action)=>{
+    add: (state,action)=> {
       const {title} = action.payload;
       state.value.push({title});
     },
-    remove: (state,action)=>{
+    remove: (state,action)=> {
       const {id} = action.payload;
       state.value = state.value.filter((book)=>book.id !== id);
     }
