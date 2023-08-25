@@ -25,9 +25,10 @@ const Form = () => {
   };
 
   return (
-    <form>
-      <header>ADD NEW BOOK</header>
+    <form className="form">
+      <header className="form-head">ADD NEW BOOK</header>
       <input
+        className="input inputBookTitle"
         type="text"
         placeholder="Book title"
         value={title}
@@ -36,13 +37,14 @@ const Form = () => {
         }}
       />
       <input
+        className="input"
         type="text"
         placeholder="Book author"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
       />
 
-      <button type="submit" onClick={handleClickAddBtn}>ADD BOOK</button>
+      <button className="AddBtn" type="submit" onClick={handleClickAddBtn}>ADD BOOK</button>
     </form>
   );
 };
